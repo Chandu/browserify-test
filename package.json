@@ -1,0 +1,29 @@
+{
+  "name": "browserify-test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chandu <Chandra.Vedantham@gmail.com> (http://chandu.github.io/)",
+  "license": "ISC",
+  "browserify": {
+    "transform": [ "browserify-shim" ]
+  },
+  "browser": {
+    "jquery"    :  "./components/jquery/jquery.js",
+    "bootstrap" :  "./components/bootstrap/dist/js/bootstrap.js"
+  },
+   "browserify-shim": {
+    "jquery"    :  {
+      "exports" : "$"
+    }
+  },
+  "devDependencies": {
+    "browserify": "^3.40.0",
+    "gulp": "~3.6.0",
+    "browserify-shim": "^3.4.1",
+    "vinyl-source-stream": "^0.1.1"
+  }
+}
