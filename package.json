@@ -9,15 +9,19 @@
   "author": "Chandu <Chandra.Vedantham@gmail.com> (http://chandu.github.io/)",
   "license": "ISC",
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browser": {
-    "jquery"    :  "./components/jquery/jquery.js",
-    "bootstrap" :  "./components/bootstrap/dist/js/bootstrap.js"
+    "bootstrap": "./components/bootstrap/dist/js/bootstrap.js"
   },
-   "browserify-shim": {
-    "jquery"    :  {
-      "exports" : "$"
+  "browserify-shim": {
+    "bootstrap": {
+      "exports" : "bootstrap",
+      "depends": [
+        "jquery:$"
+      ]
     }
   },
   "devDependencies": {
@@ -25,5 +29,9 @@
     "gulp": "~3.6.0",
     "browserify-shim": "^3.4.1",
     "vinyl-source-stream": "^0.1.1"
+  },
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0"
   }
 }
