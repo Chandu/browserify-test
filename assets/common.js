@@ -1,7 +1,9 @@
 var $ = require('jquery');
 var bootstrap = require('bootstrap');
 $(function(){
-	$("div").modal();
+	$("#modal").modal({
+		show: true
+	});
 });
 
 module.exports = {
